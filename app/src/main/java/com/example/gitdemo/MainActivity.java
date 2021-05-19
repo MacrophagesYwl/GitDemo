@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private int number = 0;
-    private Button mButtonAdd,mButtonSud;
+    private Button mButtonAdd, mButtonSud;
     private TextView mTextView;
 
     @Override
@@ -20,12 +20,8 @@ public class MainActivity extends AppCompatActivity {
         mButtonSud = findViewById(R.id.buttonSub);
 
         mTextView.setText(String.valueOf(number));
-        mButtonAdd.setOnClickListener(v ->{
-            mTextView.setText(String.valueOf(++number));
-        });
-        mButtonSud.setOnClickListener(v ->{
-            mTextView.setText(String.valueOf(--number));
-        });
+        mButtonAdd.setOnClickListener(v -> mTextView.setText(String.valueOf(++number)));
+        mButtonSud.setOnClickListener(v -> mTextView.setText(String.valueOf(--number)));
 
     }
 }
